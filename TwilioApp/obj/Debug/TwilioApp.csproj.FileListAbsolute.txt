@@ -1,0 +1,26 @@
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\TwilioApp.exe.config
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\TwilioApp.exe
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\TwilioApp.pdb
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\Twilio.dll
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\Newtonsoft.Json.dll
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\bin\Debug\Twilio.xml
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\obj\Debug\TwilioApp.csprojResolveAssemblyReference.cache
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\obj\Debug\TwilioApp.exe
+D:\XtensiveNG\Projects\VS2015\C#\Facial Recognition\IDS\TwilioApp\obj\Debug\TwilioApp.pdb
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.exe.config
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.exe
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.pdb
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\Twilio.dll
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\bin\Debug\Twilio.xml
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.csprojResolveAssemblyReference.cache
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.exe
+C:\Users\MICHEAL\Desktop\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.pdb
+C:\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.exe.config
+C:\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.exe
+C:\Easy\IDS\TwilioApp\bin\Debug\TwilioApp.pdb
+C:\Easy\IDS\TwilioApp\bin\Debug\Newtonsoft.Json.dll
+C:\Easy\IDS\TwilioApp\bin\Debug\Twilio.xml
+C:\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.csprojResolveAssemblyReference.cache
+C:\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.exe
+C:\Easy\IDS\TwilioApp\obj\Debug\TwilioApp.pdb
