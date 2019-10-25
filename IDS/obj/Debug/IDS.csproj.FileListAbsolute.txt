@@ -175,25 +175,31 @@ C:\Users\DM\Desktop\abrak\Easy\IDS\IDS\obj\Debug\IDS.PersonFrm.resources
 C:\Users\DM\Desktop\abrak\Easy\IDS\IDS\obj\Debug\IDS.Properties.Resources.resources
 C:\Users\DM\Desktop\abrak\Easy\IDS\IDS\obj\Debug\IDS.TrainFrm.resources
 C:\Users\DM\Desktop\abrak\Easy\IDS\IDS\obj\Debug\IDS.csproj.GenerateResource.Cache
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\EntityFramework.xml
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Database1.mdf
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Database1_log.ldf
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\IDSData.mdb
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\IDS.exe.config
-C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.exe
-C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.pdb
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\IDS.exe
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\IDS.pdb
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\EntityFramework.dll
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Microsoft.IdentityModel.Logging.dll
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Newtonsoft.Json.dll
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Twilio.dll
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Newtonsoft.Json.xml
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\bin\Debug\Twilio.xml
-C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.csprojResolveAssemblyReference.cache
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.ActivateFrm.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.EditPersonFrm.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.EyeFrm.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.Form1.resources
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.frmAttendance.resources
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.frmStudents.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.frm_test.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.InputName.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.ListPersonFrm.resources
@@ -202,3 +208,6 @@ C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.Per
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.Properties.Resources.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.TrainFrm.resources
 C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.csproj.GenerateResource.Cache
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.exe
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.pdb
+C:\Users\DM\Documents\Visual Studio 2015\Projects\Abubakar\IDS\obj\Debug\IDS.csprojResolveAssemblyReference.cache

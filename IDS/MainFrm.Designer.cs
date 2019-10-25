@@ -47,11 +47,13 @@
             this.MnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.btnmenu = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnedit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btntrain = new System.Windows.Forms.Button();
             this.btnactivate = new System.Windows.Forms.Button();
+            this.btn_Students = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,48 +178,47 @@
             // 
             // btnmenu
             // 
-            this.btnmenu.Location = new System.Drawing.Point(12, 12);
+            this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenu.Location = new System.Drawing.Point(21, 325);
+            this.btnmenu.Margin = new System.Windows.Forms.Padding(6);
             this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(190, 27);
+            this.btnmenu.Size = new System.Drawing.Size(348, 50);
             this.btnmenu.TabIndex = 1;
             this.btnmenu.Text = "Menu";
             this.btnmenu.UseVisualStyleBackColor = true;
             this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackgroundImage = global::IDS.Properties.Resources.face3;
-            this.groupBox1.Location = new System.Drawing.Point(208, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(698, 432);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(12, 110);
+            this.btnedit.Location = new System.Drawing.Point(21, 426);
+            this.btnedit.Margin = new System.Windows.Forms.Padding(6);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(190, 27);
+            this.btnedit.Size = new System.Drawing.Size(348, 50);
             this.btnedit.TabIndex = 3;
             this.btnedit.Text = "Edit Student Details";
             this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Visible = false;
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(12, 60);
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(21, 15);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(6);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(190, 27);
+            this.btnNew.Size = new System.Drawing.Size(348, 50);
             this.btnNew.TabIndex = 4;
-            this.btnNew.Text = "Add New Student";
+            this.btnNew.Text = "Register Student";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btntrain
             // 
-            this.btntrain.Location = new System.Drawing.Point(12, 157);
+            this.btntrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntrain.Location = new System.Drawing.Point(21, 77);
+            this.btntrain.Margin = new System.Windows.Forms.Padding(6);
             this.btntrain.Name = "btntrain";
-            this.btntrain.Size = new System.Drawing.Size(190, 27);
+            this.btntrain.Size = new System.Drawing.Size(348, 50);
             this.btntrain.TabIndex = 5;
             this.btntrain.Text = "Capture image";
             this.btntrain.UseVisualStyleBackColor = true;
@@ -225,34 +226,72 @@
             // 
             // btnactivate
             // 
-            this.btnactivate.Location = new System.Drawing.Point(12, 203);
+            this.btnactivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactivate.Location = new System.Drawing.Point(21, 139);
+            this.btnactivate.Margin = new System.Windows.Forms.Padding(6);
             this.btnactivate.Name = "btnactivate";
-            this.btnactivate.Size = new System.Drawing.Size(190, 27);
+            this.btnactivate.Size = new System.Drawing.Size(348, 50);
             this.btnactivate.TabIndex = 6;
             this.btnactivate.Text = "Activate Camera";
             this.btnactivate.UseVisualStyleBackColor = true;
             this.btnactivate.Click += new System.EventHandler(this.btnactivate_Click);
             // 
+            // btn_Students
+            // 
+            this.btn_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Students.Location = new System.Drawing.Point(21, 201);
+            this.btn_Students.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_Students.Name = "btn_Students";
+            this.btn_Students.Size = new System.Drawing.Size(348, 50);
+            this.btn_Students.TabIndex = 7;
+            this.btn_Students.Text = "Registered Students";
+            this.btn_Students.UseVisualStyleBackColor = true;
+            this.btn_Students.Click += new System.EventHandler(this.btn_Students_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(21, 263);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(348, 50);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Attendance";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImage = global::IDS.Properties.Resources.face3;
+            this.groupBox1.Location = new System.Drawing.Point(381, 22);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Size = new System.Drawing.Size(1280, 798);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
             // MainFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(918, 447);
+            this.ClientSize = new System.Drawing.Size(1034, 420);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Students);
             this.Controls.Add(this.btnactivate);
             this.Controls.Add(this.btntrain);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnmenu);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainFrm";
             this.ShowInTaskbar = false;
             this.Text = "MainFrm";
-            this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Load += new System.EventHandler(this.MainFrm_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainFrm_MouseClick);
@@ -288,5 +327,7 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btntrain;
         private System.Windows.Forms.Button btnactivate;
+        private System.Windows.Forms.Button btn_Students;
+        private System.Windows.Forms.Button button1;
     }
 }

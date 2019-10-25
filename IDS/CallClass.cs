@@ -30,7 +30,7 @@ namespace IDS
 
             try
             {
-                TwilioClient.Init(accountSid, authToken);
+                //TwilioClient.Init(accountSid, authToken);
 
                 var call = CallResource.Create(
                     to: new PhoneNumber("+2348036420271"),
@@ -38,8 +38,7 @@ namespace IDS
                     from: new PhoneNumber("+12622870316"),
                     url: new Uri("https://018d5d5b.ngrok.io/ids.ng/voice.xml"));
 
-                string callID = call.Sid.ToString();
-
+                //string callID = call.Sid.ToString();
             }
             catch (Exception n)
             {

@@ -33,6 +33,8 @@ namespace IDS
 
         public FSDK.CImage image;
         public FSDK.CImage faceImage;
+        public string course;
+        public string regno;
     }
 
 
@@ -212,6 +214,12 @@ namespace IDS
                     oCmd.Parameters["@FaceImage"].Value = faceImage;
 
                     int iresult = oCmd.ExecuteNonQuery();
+                    cn.Close();
+                    cn.Open();
+                    string sqlString_student = "INSERT INTO students(regno,fullname,gender,level) VALUES('" + fr.Title + "','" + fr.Fullname + "','" + fr.Gender + "','" + fr.course + "')";
+                    OleDbCommand cmds = new OleDbCommand(sqlString_student, cn);
+                    cmds.ExecuteNonQuery();
+                    cn.Close();
 
                     img.Dispose();
                     img_face.Dispose();
@@ -587,8 +595,6 @@ namespace IDS
             {
 
             }
-
-
             return cam;
         }
 

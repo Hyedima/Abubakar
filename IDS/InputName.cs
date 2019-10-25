@@ -58,6 +58,8 @@ namespace IDS
             fr.Fullname = txtName.Text.Trim();
             fr.Title = comTitle.Text.Trim();
             fr.Gender = comGender.Text.Trim();
+            fr.course = comboCourse.Text.Trim();
+            fr.regno = comTitle.Text;
             fr.ListType = "Open";
 
             if (Global.AutomaticTaining)
@@ -95,11 +97,7 @@ namespace IDS
                 {
 
                 }
-
             }
-
-
-
             this.Close();
         }
 
@@ -158,6 +156,11 @@ namespace IDS
         private void chkTraining_CheckedChanged(object sender, EventArgs e)
         {
             Global.AutomaticTaining = chkTraining.Checked;
+        }
+
+        private void InputName_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

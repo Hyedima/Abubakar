@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data;
+using System.Data.OleDb;
 
 using Luxand;
 using System.Threading;
@@ -16,11 +18,16 @@ namespace IDS
 {
     public partial class ActivateFrm : Form
     {
+        Database1Entities db = new Database1Entities();
+        string cnString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\IDSData.mdb;";
+
         int delay = 5000;
         bool delayElapse = true;
         string IntruderFullName = "";
         bool MakingCall = false;
         bool call = false;
+        int un = 0;
+        int kno = 0;
        // Timer timer = new Timer();
 
         FxClass Fx = new FxClass();
@@ -236,6 +243,41 @@ namespace IDS
                             W = w;
 
                             gr.DrawRectangle(pen, left, top, w, w);
+                            if (FaceFullName == "Unknown Face")
+                            {
+                                un++;
+                                if (un >= 20)
+                                {
+                                    //MessageBox.Show("I don't kno him");
+                                }
+                            }
+                            else
+                            {
+                                kno++;
+                                if (kno >= 5)
+                                {
+                                    //MessageBox.Show("i know him");
+                                    
+                                    //Get detected student details
+                                    var d_student = db.Students.Where(p => p.fullname == Name).FirstOrDefault();
+                                    var att = db.Attendances.Where(p=>p.fullname == name && p.insertdate > DateTime.Now.AddDays(-1));
+                                    if(att.Count() == 0)
+                                    {
+                                        //save to attedance
+                                        db.Attendances.Add(
+                                            new Attendance
+                                            {
+                                            // regno = 
+                                            regno = d_student.regno,
+                                                fullname = d_student.fullname,
+                                                gender = d_student.gender,
+                                                level = d_student.level,
+                                                insertdate = DateTime.Now
+                                            });
+                                        db.SaveChanges();
+                                    }
+                                }
+                            }
 
                             if (MakingCall == false)
                             {
@@ -243,7 +285,7 @@ namespace IDS
                                 // timer.Tick += timer_Tick;
                                 //timer.Interval = 30000000;
                                 // timer.Start();
-                                MessageBox.Show("UNKNOWN");
+                                //MessageBox.Show("UNKNOWN");
                                 Thread.Sleep(5000);
                                 TwilioClass call = new TwilioClass();
                                 if (call.MakeCall(IntruderFullName))
@@ -289,7 +331,6 @@ namespace IDS
         {
             mouseX = e.X;
             mouseY = e.Y;
-
         }
 
         private void imageBox_MouseLeave(object sender, EventArgs e)

@@ -7,12 +7,15 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.OleDb;
 using System.Threading;
+using IDS.DataSet1TableAdapters;
 
 
 namespace IDS
 {
     class Person
     {
+        DataSet1 data = new DataSet1();
+
         string cnString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\IDSData.mdb;";
         string sqlString = "";
 
@@ -23,12 +26,13 @@ namespace IDS
         public string ListType { get; set; }
         public string PassportImage { get; set; }
         public byte[] FaceTemplate { get; set; }
-
+        public string regno { get; set; }
+        public string level { get; set; }
+        Database1Entities db = new Database1Entities();
 
         public bool SavePerson()
         {
             bool ok = true;
-
             OleDbConnection cn = new OleDbConnection();
 
             try
@@ -36,20 +40,31 @@ namespace IDS
                 cn.ConnectionString = cnString;
                 cn.Open();
 
-                sqlString = "INSERT INTO PersonTable(Title,FName,Gender,Img,template) VALUES('" + Title + "','" + FullName + "','" + Gender + "','" + PassportImage + "','" + FaceTemplate.ToString() + "')";
+                sqlString = "INSERT INTO PersonTable(Title,FName,Gender,template) VALUES('" + Title + "','" + FullName + "','" + Gender + "','" + FaceTemplate.ToString() + "')";
                 OleDbCommand cmd = new OleDbCommand(sqlString, cn);
                 cmd.ExecuteNonQuery();
+                cn.Close();
+                // addd new Student
+                db.Students.Add(
+                    new Student
+                    {
+                        regno = Title,
+                        fullname = FullName,
+                        gender = Gender,
+                        level = level,
+                        insertdate = DateTime.Now
+                    });
+                db.SaveChanges();
             }
             catch (Exception n)
             {
+                MessageBox.Show("An error occured: " + n);
                 ok = false;
-            }
+            } 
             finally
             {
                 cn.Close();
             }
-
-
             return ok;
         }
 
@@ -88,21 +103,17 @@ namespace IDS
 
                     pers[i] = p;
                 }
-
-/*
+                /*
                 Parallel.ForEach(table.Rows, (DataRow)row =>
                 {
                     Person p = new Person();
-
                     p.ID = row.ItemArray[0].ToString().Trim();
                     p.Title = row.ItemArray[2].ToString().Trim();
                     p.FullName = row.ItemArray[1].ToString().Trim();
                     p.Gender = row.ItemArray[3].ToString().Trim();
                     p.ListType = row.ItemArray[4].ToString().Trim();
                     p.PassportImage = row.ItemArray[5].ToString().Trim();
-
                     i++;
-
                     pers[i] = p;
                 });
                 */

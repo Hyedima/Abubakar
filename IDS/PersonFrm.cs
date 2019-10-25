@@ -16,10 +16,12 @@ namespace IDS
 {
     public partial class PersonFrm : Form
     {
+        Database1Entities db = new Database1Entities();
+        //Model_Abu n = new Model_Abu();
         // WinAPI procedure to release HBITMAP handles returned by FSDKCam.GrabFrame
         [DllImport("gdi32.dll")]
         static extern bool DeleteObject(IntPtr hObject);
-
+        
         FxClass Fx = new FxClass();
         byte[] faceTemplate;
 
@@ -35,9 +37,12 @@ namespace IDS
 
         private void PersonFrm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.dataSet1.Students);
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - (Width + 200), Screen.PrimaryScreen.WorkingArea.Height - (Height + 200));
-            comTitle.SelectedIndex = 0;
+            //comTitle.SelectedIndex = 0;
             comSex.SelectedIndex = 0;
+            comboCourse.SelectedIndex = 0;
 
 
             if (FSDK.FSDKE_OK != FSDK.ActivateLibrary("vzm3vx/iIfmU4NsxPHciqHwP/fdsnVT4vo3MpwZvuI0e3oqsOjq1Gp4CeTC4m963GGJdSFwgR40MB3jdXKvT+IB9uuaFhdTS6Y5kbi/LXu4MqGkNDVHRKcP47VaP/djTvJFOsfP9gxH4qneFm/C5m0jHEzdPTc5O8tPmsC7EOoE="))
@@ -45,14 +50,13 @@ namespace IDS
                 MessageBox.Show("Please run the License Key Wizard (Start - Luxand - FaceSDK - License Key Wizard)", "Error activating FaceSDK", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
-
             FSDK.InitializeLibrary();
             FSDK.SetFaceDetectionParameters(true, true, 384);
         }
 
         private void picImg_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Do You Want To Change This Pciture?","Ïntrusion Detection", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) { return; }
+            if(MessageBox.Show("Do You Want To Upload a Pciture?","Attendance System", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) { return; }
 
             try
             {
@@ -90,11 +94,9 @@ namespace IDS
                             int top = facePosition.yc - (int)(facePosition.w * 0.5f);
                             gr.DrawRectangle(Pens.LightGreen, left, top, (int)(facePosition.w * 1.2), (int)(facePosition.w * 1.2));
 
-
                             faceTemplate = new byte[FSDK.TemplateSize];
                             FSDK.GetFaceTemplateInRegion(image.ImageHandle, ref facePosition, out faceTemplate);
                                 //GetFaceTemplate(image, out templateData);
-
 
                             FSDK.TPoint[] facialFeatures = image.DetectFacialFeaturesInRegion(ref facePosition);
                             int i = 0;
@@ -125,6 +127,12 @@ namespace IDS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(picImg == null)
+            {
+                MessageBox.Show("Please select an image");
+                txtFName.Focus();
+                return;
+            }
             if (txtFName.Text.Trim() == "")
             {
                 MessageBox.Show("Person Name Cannot Be Empty", "Invalid Entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -139,11 +147,38 @@ namespace IDS
             p.Gender = comSex.Text.Trim();
             p.PassportImage = Fx.ImageToBase64(picImg.Image, ImageFormat.Png);
             p.FaceTemplate = faceTemplate;
-
-            if (p.SavePerson() == true)
+            p.level = comboCourse.Text.Trim();
+            p.regno = comTitle.Text.Trim();
+            if(p.PassportImage.Length <= 0)
             {
-                MessageBox.Show("Person Added Successfully.", "Intrusion Detection System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please select an image");
             }
+            else
+            {
+                //check if RegNo Exist
+                var student = db.Students.Find(p.Title);
+
+                //var student = data.Students.FirstOrDefault(p=>p.regno == Title);
+                // Console.WriteLine(student);
+                if (student != null)
+                {
+                    MessageBox.Show("User already exist " +student.regno);
+                    return;
+                }
+
+                if (p.SavePerson() == true)
+                {
+                    MessageBox.Show("Person Added Successfully.", "Intrusion Detection System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            }
+        }
+
+        private void studentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.studentsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
 
         }
     }

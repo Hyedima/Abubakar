@@ -43,7 +43,7 @@ namespace IDS
 
         private void MainFrm_Load(object sender, EventArgs e)
         {
-            this.BringToFront();
+            //this.BringToFront();
 
             //this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - Width, Screen.PrimaryScreen.WorkingArea.Height - Height);
         }
@@ -295,6 +295,18 @@ namespace IDS
             Frm.ShowDialog(this);
             //Frm.Show();
             return;
+        }
+
+        private void btn_Students_Click(object sender, EventArgs e)
+        {
+            frmStudents frm = new frmStudents();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAttendance frm = new frmAttendance();
+            frm.Show();
         }
     }
 }
